@@ -1,0 +1,59 @@
+<html>
+	<head>
+	<title>lbs to kgs</title>
+	<style>
+	input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=Process] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=Process]:hover {
+  background-color: #45a049;
+}
+	</style>
+	</head>
+	<body>
+	<header>
+		<h1> </h1>
+	</header>
+	<section>
+		<article>
+			<form name="calculate">
+				<p>Enter weight in pounds </p>
+				<input type="text" name="lbs">
+				<br>
+				<br>
+				Weight in kilogram is
+				<input type="text" name="kgs" readonly="readonly">
+				<input type="button" value="Process" onclick="process()	">
+					<br>
+				</form>
+				
+				<script type="text/javascript">
+				function process()
+				{
+				var lbsVar = parseFloat(document.calculate.lbs.value);
+				var kgsVar = lbsVar/2.2;
+				document.calculate.kgs.value = Math.round(kgsVar*100)/100.0;
+				}
+				</script>
+			</article>
+		</section>
+		</body>
+				
+</html>
